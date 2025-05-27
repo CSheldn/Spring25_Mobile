@@ -1,0 +1,18 @@
+{
+    "Sheldon's Movie" : {
+        "Year": "2014",
+        "Rating": "10/10"
+    },
+    "Return of Sheldon" : {
+        "Year": "2025",
+        "Rating": "8/10"
+    },
+    "Young Sheldon" : {
+        "Year": "2008",
+        "Rating": "5/10"
+    },
+    "Sheldon's End" : {
+        "Year": "2082",
+        "Rating": "1/10"
+    }
+}

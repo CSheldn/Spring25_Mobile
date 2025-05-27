@@ -1,35 +1,46 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import data from './movies.json' 
 
-function App() {
-  const [count, setCount] = useState(0)
+function Movie (name, year, rating) {
+  return (
+    name, year, rating
+  );
+}
+
+function MovieList (movies) {
+  let movieSTR = ""
+
+  for (let movie of movies) {
+    movieSTR += movie.name
+    movieSTR += movie.year
+    movieSTR += movie.rating
+
+  }
+
+  return (movieSTR)
+}
+
+function NavBar() {
+  const [status, setStatus] = useState(true)
+
+  for (let movie in data) {
+    console.log(movie.year)
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+  <header>
+    <h1>Assignment 1</h1>
+    <button onClick={() => setStatus(!status)}>{status ? "Logout" : "Login"}</button>
+  </header>
+  );
+}
+
+function App() {
+
+  return <>
+  <NavBar />
+  </>;
 }
 
 export default App
