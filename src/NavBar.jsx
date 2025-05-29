@@ -5,6 +5,7 @@ function NavBar() {
     const [status, setStatus] = useState(true)
 
     return (
+        <>
         <nav>
             <ul class="py">
                 <li>
@@ -15,6 +16,7 @@ function NavBar() {
                 </li>
             </ul>
         </nav>
+        </>
     )
 };
 
