@@ -7,9 +7,9 @@ function NavBar() {
     return (
         <>
         <nav>
-            <ul class="py">
-                <li>
-                    <h1>Assignment 1</h1>
+            <ul class="menu">
+                <li class="menu-title">
+                    <label class="react-title">Assignment 1</label>
                 </li>
                 <li class="justify-end">
                     <button onClick={() => setStatus(!status)}>{status ? "Logout" : "Login"}</button>

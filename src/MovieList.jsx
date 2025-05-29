@@ -6,7 +6,7 @@ function MovieList({data}) {
         <>
         {
             data.map( (movieInfo) => {
-                return <Movie name={movieInfo.name} year={movieInfo.year} rating={movieInfo.rating}/>
+                return (<Movie name={movieInfo.name} year={movieInfo.year} rating={movieInfo.rating}/> )
             })
         }
         </>
